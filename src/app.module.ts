@@ -11,7 +11,7 @@ import { UsersModule } from './Features/users/users.module';
       port: 3306,
       username: 'root',
       password: '',
-      database: 'bdusers',
+      database: 'db_naruro_shirt',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // Sincroniza automáticamente el esquema de la base de datos (solo para desarrollo)
     }),

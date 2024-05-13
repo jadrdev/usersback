@@ -2,7 +2,9 @@
 // user.entity.ts
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity({
+  name: 'tb_users',
+})
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
@@ -11,8 +13,23 @@ export class User {
   username: string;
 
   @Column()
+  name: string;
+
+  @Column()
+  lastname: string;
+
+  @Column()
   email: string;
 
   @Column()
   password: string;
+
+  @Column()
+  role: string;
+
+  @Column()
+  createdAt: Date;
+
+  @Column()
+  updatedAt: Date;
 }
