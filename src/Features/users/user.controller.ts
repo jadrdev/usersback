@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // user.controller.ts
 import {
   Controller,
