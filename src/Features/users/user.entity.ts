@@ -25,11 +25,14 @@ export class User {
   password: string;
 
   @Column()
-  role: string;
+  passwordConfim: string;
 
   @Column()
-  createdAt: Date;
+  role: string | null;
 
   @Column()
-  updatedAt: Date;
+  createdAt: Date = new Date();
+
+  @Column()
+  updatedAt: Date = new Date();
 }
