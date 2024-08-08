@@ -10,6 +10,7 @@ async function bootstrap() {
     .setDescription('API de usuarios con NestJS')
     .setVersion('1.0')
     .addTag('users')
+    .addTag('products')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

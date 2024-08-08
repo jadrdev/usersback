@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 // user.entity.ts
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import { Role } from '../roles/roles.entity';
 
 @Entity({
   name: 'tb_users',
@@ -27,8 +28,9 @@ export class User {
   @Column()
   passwordConfim: string;
 
-  @Column()
-  role: string | null;
+  @ManyToMany(() => Role)
+  @JoinTable()
+  roles: Role[];
 
   @Column()
   createdAt: Date = new Date();
